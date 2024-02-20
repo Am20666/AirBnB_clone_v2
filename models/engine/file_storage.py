@@ -49,3 +49,8 @@ class FileStorage:
                     self.new(eval(cls_name)(**i))
         except FileNotFoundError:
             return
+
+    def close(self):
+        """Call the reload method"""
+        self.reload()
+
